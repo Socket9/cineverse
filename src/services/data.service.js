@@ -133,8 +133,6 @@ export const fetchMedia = async (searchKey, type, page) => {
         searching === "search" ? `query=${searchKey}&` : ""
     }page=${page}`;
 
-    console.log(url);
-
     const options = {
         method: "GET",
         headers: {
