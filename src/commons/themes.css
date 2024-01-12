@@ -1,0 +1,537 @@
+/* ============*/
+/* LIGHT THEME */
+/* ============*/
+
+.light {
+    background-color: var(--background-light-mode);
+
+    /* NAVIGATION BAR */
+
+    & .nav-section {
+        & .title-section {
+            & span {
+                color: var(--secondary-light-mode);
+            }
+
+            & hr {
+                background-color: var(--secondary-light-mode);
+            }
+        }
+        & .links {
+            & i,
+            p {
+                color: var(--primary-light-mode);
+            }
+
+            & .nav-link:hover {
+                & i,
+                p {
+                    color: var(--darkest-light-mode);
+                }
+            }
+        }
+    }
+
+    /* HEADER BAR */
+
+    .header-container {
+        background-color: var(--section-light-mode);
+        box-shadow: var(--box-shadow-light-mode);
+
+        & .search-container {
+            background-color: var(--background-light-mode);
+            border: 2px solid transparent;
+
+            & i,
+            form input,
+            form input::placeholder {
+                color: var(--primary-light-mode);
+            }
+        }
+
+        & .search-container:focus-within {
+            border: 2px solid var(--primary-light-mode);
+        }
+
+        & .toggle-button {
+            border: 2px solid var(--section-dark-mode);
+            color: var(--section-dark-mode);
+            box-shadow: var(--box-shadow-light-mode);
+        }
+
+        & .toggle-button:hover {
+            border: 2px solid var(--tertiary-light-mode);
+            color: var(--tertiary-light-mode);
+        }
+
+        & .auth-container {
+            & .log-in-btn {
+                background-color: var(--secondary-light-mode);
+                color: var(--section-light-mode);
+            }
+
+            & .log-in-btn:hover {
+                background-color: var(--tertiary-light-mode);
+            }
+
+            & .modal {
+                background-color: var(--lightest-color-light-mode);
+                color: var(--darkest-color-light-mode);
+
+                & img {
+                    border-color: var(--darkest-color-light-mode);
+                }
+
+                & button {
+                    border-color: var(--primary-light-mode);
+                    color: var(--primary-light-mode);
+                }
+
+                & button:hover {
+                    border-color: var(--darkest-color-light-mode);
+                    color: var(--darkest-color-light-mode);
+                }
+            }
+
+            & .toast-login {
+                & .p-toast-message {
+                    background-color: var(--lightest-color-light-mode);
+                }
+            }
+        }
+    }
+
+    .user-details-section {
+        background-color: var(--section-light-mode);
+        box-shadow: var(--box-shadow-light-mode);
+        
+        & .info{
+            color: var(--darkest-color-light-mode);
+        }
+    }
+
+    /* LIST OF MEDIA */
+
+    .media-section {
+        background-color: var(--section-light-mode);
+        box-shadow: var(--box-shadow-light-mode);
+
+        & .media-card {
+            color: var(--primary-light-mode);
+
+            & .img-container {
+                & span {
+                    color: var(--lightest-color-light-mode);
+                    background-color: var(--light-blue);
+                }
+            }
+        }
+
+        & .media-card:hover {
+            color: var(--darkest-color-light-mode);
+        }
+
+        & .pagination {
+            & .pages {
+                & .current {
+                    color: var(--darkest-color-light-mode);
+                }
+                & .prev,
+                .next {
+                    color: var(--primary-light-mode);
+                }
+            }
+            & button {
+                background-color: var(--light-blue);
+                color: var(--lightest-color-light-mode);
+            }
+        }
+    }
+
+    /* MOVIE DETAILS */
+
+    .details-container {
+        background-color: var(--section-light-mode);
+        box-shadow: var(--box-shadow-light-mode);
+
+        & .details-content {
+            & .info {
+                & .release-date {
+                    color: var(--primary-light-mode);
+                }
+                & .title-vote {
+                    & h3 {
+                        color: var(--darkest-color-light-mode);
+                    }
+                    & span {
+                        color: var(--primary-light-mode);
+                        background-color: var(--tertiary-light-mode);
+                    }
+
+                    & .fav {
+                        color: var(--fav-icon-light-mode);
+                    }
+                    & .non-fav {
+                        color: var(--darkest-color-light-mode);
+                    }
+                }
+
+                & .genres {
+                    & .genre-tag {
+                        border: 2px solid var(--secondary-light-mode);
+
+                        color: var(--secondary-light-mode);
+                    }
+                }
+
+                & .description {
+                    color: var(--darkest-color-light-mode);
+
+                    & .vote {
+                        background-color: var(--light-blue);
+                        color: var(--lightest-color-light-mode);
+                    }
+                }
+
+                & .episodes {
+                    & span {
+                        background-color: var(--tertiary-light-mode);
+                        color: var(--darkest-color-light-mode);
+                    }
+                }
+
+                & .buttons {
+                    & .homepage,
+                    .video {
+                        background-color: transparent;
+                        border: 2px solid var(--primary-light-mode);
+                        color: var(--primary-light-mode);
+                    }
+
+                    & .homepage:hover,
+                    .video:hover {
+                        border: 2px solid var(--primary-light-mode);
+                        background-color: var(--primary-light-mode);
+                        color: var(--lightest-color-light-mode);
+                    }
+
+                    & .go-back-btn {
+                        background-color: var(--primary-light-mode);
+                        color: var(--lightest-color-light-mode);
+                    }
+
+                    & .go-back-btn:hover {
+                        background-color: transparent;
+                        border-color: var(--primary-light-mode);
+                        color: var(--primary-light-mode);
+                    }
+                }
+            }
+        }
+    }
+
+    /* FAVORITES */
+
+    .favorites-section {
+        background-color: var(--section-light-mode);
+        box-shadow: var(--box-shadow-light-mode);
+
+        & .fav-title {
+            color: var(--darkest-color-light-mode);
+        }
+
+        & .media-card {
+            color: var(--primary-light-mode);
+
+            & .img-container {
+                & span {
+                    color: var(--lightest-color-light-mode);
+                    background-color: var(--light-blue);
+                }
+            }
+        }
+
+        & .media-card:hover {
+            color: var(--darkest-color-light-mode);
+        }
+    }
+
+    /* LOADING SPINNER */
+
+    & .spinner {
+        border-color: var(--primary-light-mode) transparent
+            var(--primary-light-mode) transparent;
+    }
+}
+
+/* ===========*/
+/* DARK THEME */
+/* ===========*/
+
+.dark {
+    background-color: var(--background-dark-mode);
+
+    /* NAVIGATION BAR */
+
+    & .nav-section {
+        & .title-section {
+            & span {
+                color: var(--secondary-dark-mode);
+            }
+            & hr {
+                background-color: var(--secondary-dark-mode);
+            }
+        }
+        & .links {
+            & i,
+            p {
+                color: var(--primary-dark-mode);
+            }
+
+            & .nav-link:hover {
+                & i,
+                p {
+                    color: var(--white-color-dark-mode);
+                }
+            }
+        }
+    }
+
+    /* HEADER BAR */
+
+    .header-container {
+        background-color: var(--section-dark-mode);
+        box-shadow: var(--box-shadow-dark-mode);
+
+        & .search-container {
+            background-color: var(--background-dark-mode);
+            border: 2px solid transparent;
+
+            & i,
+            form input,
+            form input::placeholder {
+                color: var(--primary-dark-mode);
+            }
+        }
+
+        & .search-container:focus-within {
+            border: 2px solid var(--primary-dark-mode);
+        }
+
+        & .toggle-button {
+            border: 2px solid var(--tertiary-dark-mode);
+            color: var(--tertiary-dark-mode);
+            box-shadow: var(--box-shadow-dark-mode);
+        }
+
+        & .toggle-button:hover {
+            border: 2px solid var(--lightest-color-light-mode);
+            color: var(--lightest-color-light-mode);
+        }
+
+        & .auth-container {
+            & .log-in-btn {
+                background-color: var(--primary-dark-mode);
+                color: var(--darkest-color-dark-mode);
+            }
+
+            & .log-in-btn:hover {
+                background-color: var(--tertiary-dark-mode);
+            }
+
+            & .modal {
+                background-color: var(--darkest-color-dark-mode);
+                color: var(--lightest-color-dark-mode);
+
+                & img {
+                    border-color: var(--lightest-color-dark-mode);
+                }
+
+                & button {
+                    border-color: var(--tertiary-dark-mode);
+                    color: var(--tertiary-dark-mode);
+                }
+
+                & button:hover {
+                    border-color: var(--lightest-color-dark-mode);
+                    color: var(--lightest-color-dark-mode);
+                }
+            }
+
+            & .toast-login {
+                & .p-toast-message {
+                    background-color: var(--darkest-color-dark-mode);
+                }
+            }
+        }
+    }
+
+    .user-details-section {
+        background-color: var(--section-dark-mode);
+        box-shadow: var(--box-shadow-dark-mode);
+        
+        & .info{
+            color: var(--lightest-color-dark-mode);
+        }
+    }
+
+    /* LIST OF MEDIA */
+
+    .media-section {
+        background-color: var(--section-dark-mode);
+        box-shadow: var(--box-shadow-dark-mode);
+
+        & .media-card {
+            color: var(--tertiary-dark-mode);
+
+            & .img-container {
+                & span {
+                    color: var(--darkest-color-dark-mode);
+                    background-color: var(--light-blue);
+                }
+            }
+        }
+
+        & .media-card:hover {
+            color: var(--lightest-color-dark-mode);
+        }
+
+        & .pagination {
+            & .pages {
+                & .current {
+                    color: var(--lightest-color-dark-mode);
+                }
+                & .prev,
+                .next {
+                    color: var(--secondary-dark-mode);
+                }
+            }
+            & button {
+                background-color: var(--light-blue);
+                color: var(--lightest-color-light-mode);
+            }
+        }
+    }
+
+    /* MOVIE DETAILS */
+
+    .details-container {
+        background-color: var(--section-dark-mode);
+        box-shadow: var(--box-shadow-dark-mode);
+
+        & .details-content {
+            & .info {
+                & .release-date {
+                    color: var(--primary-dark-mode);
+                }
+                & .title-vote {
+                    & h3 {
+                        color: var(--lightest-color-dark-mode);
+                    }
+                    & span {
+                        color: var(--tertiary-dark-mode);
+                        background-color: var(--secondary-dark-mode);
+                    }
+
+                    & .fav {
+                        color: var(--fav-icon-dark-mode);
+                    }
+                    & .non-fav {
+                        color: var(--lightest-color-dark-mode);
+                    }
+                }
+
+                & .genres {
+                    & .genre-tag {
+                        border: 2px solid var(--secondary-dark-mode);
+
+                        color: var(--secondary-dark-mode);
+                    }
+                }
+
+                & .description {
+                    color: var(--lightest-color-dark-mode);
+
+                    & .vote {
+                        background-color: var(--light-blue);
+                        color: var(--darkest-color-dark-mode);
+                    }
+                }
+
+                & .episodes {
+                    & span {
+                        background-color: var(--tertiary-dark-mode);
+                        color: var(--darkest-color-dark-mode);
+                    }
+                }
+
+                & .buttons {
+                    & .homepage,
+                    video {
+                        background-color: transparent;
+                        border: 2px solid var(--primary-dark-mode);
+                        color: var(--primary-dark-mode);
+                    }
+
+                    & .homepage:hover,
+                    .video:hover {
+                        border: 2px solid var(--primary-dark-mode);
+                        background-color: var(--primary-dark-mode);
+                        color: var(--darkest-color-dark-mode);
+                    }
+
+                    & .go-back-btn {
+                        border-color: var(--primary-dark-mode);
+                        background-color: var(--primary-dark-mode);
+                        color: var(--darkest-color-dark-mode);
+                    }
+
+                    & .go-back-btn:hover {
+                        background-color: transparent;
+                        border-color: var(--primary-dark-mode);
+                        color: var(--primary-dark-mode);
+                    }
+                }
+            }
+        }
+    }
+
+    /* FAVORITES */
+
+    .favorites-section {
+        background-color: var(--section-dark-mode);
+        box-shadow: var(--box-shadow-dark-mode);
+
+        & .fav-title {
+            color: var(--lightest-color-dark-mode);
+        }
+
+        & .fav-container {
+            & p{
+                color: var(--lightest-color-dark-mode);
+            }
+
+            & .media-card {
+                color: var(--tertiary-dark-mode);
+
+                & .img-container {
+                    & span {
+                        color: var(--lightest-color-dark-mode);
+                        background-color: var(--light-blue);
+                    }
+                }
+            }
+
+            & .media-card:hover {
+                color: var(--lightest-color-dark-mode);
+            }
+        }
+    }
+
+    /* LOADING SPINNER */
+
+    & .spinner {
+        border-color: var(--primary-dark-mode) transparent
+            var(--primary-dark-mode) transparent;
+    }
+}

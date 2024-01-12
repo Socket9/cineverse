@@ -1,0 +1,40 @@
+.media-card {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 200px;
+    text-align: center;
+    margin: 0 auto;
+    text-decoration: none;
+
+    & .img-container {
+        position: relative;
+
+        & img {
+            width: 200px;
+            height: 300px;
+            border-radius: 0.5rem;
+        }
+
+        & .year {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            padding: 0.4rem 0.5rem;
+            border-radius: 0.5rem;
+            line-height: 1;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+    }
+
+    & h3 {
+        font-size: 0.9rem;
+        width: 23ch;
+    }
+}

@@ -1,0 +1,12 @@
+.toggle-button {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    background-color: transparent;
+
+    & i {
+        padding: 0.5rem;
+        font-weight: bold;
+    }
+}

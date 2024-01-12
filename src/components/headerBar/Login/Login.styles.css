@@ -1,0 +1,89 @@
+.auth-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+
+    & .user {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+
+        & .info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        & img {
+            border-radius: 50%;
+            width: 40px;
+        }
+
+        & .log-in-btn {
+            border: none;
+            cursor: pointer;
+            padding: 0.2rem 0.5rem;
+            border-radius: 0.5rem;
+        }
+
+        & .avatar {
+            cursor: pointer;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            background-color: transparent;
+        }
+    }
+
+    .modal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem;
+        position: absolute;
+        border-radius: 1rem;
+        bottom: -12rem;
+        right: 1rem;
+        z-index: 2;
+
+        & img {
+            width: 65px;
+            border: 2px solid;
+        }
+
+        & button {
+            background-color: transparent;
+            font-weight: bold;
+            border: 2px solid;
+            cursor: pointer;
+            padding: 0.4rem;
+            font-size: 0.9rem;
+            border-radius: 0.5rem;
+            width: 100%;
+        }
+    }
+
+    & .log-in-btn {
+        border: none;
+        cursor: pointer;
+        padding: 0.2rem 0.5rem;
+        border-radius: 0.5rem;
+    }
+
+    & .toast-login {
+        & .p-toast-message {
+            padding: 0.5rem 1rem;
+
+            & .p-toast-message-content {
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+    }
+}

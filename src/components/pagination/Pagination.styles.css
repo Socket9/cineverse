@@ -1,0 +1,31 @@
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    & .pages{
+	display: flex;
+	align-items: center;
+	font-weight: bold;
+	gap: .5rem;
+
+	& .current {
+		font-size: 1.7rem;
+	}
+
+	& .prev, .next{
+		font-size: .8rem;
+	}
+    }
+
+    & button {
+        padding: 0.1rem 0.5rem;
+        font-size: 0.9rem;
+	  font-weight: bold;
+	  border: 2px solid transparent;
+	  border-radius: .5rem;
+	  cursor: pointer;
+    }
+}
