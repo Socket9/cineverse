@@ -5,6 +5,7 @@ import Loading from "../../loading/Loading";
 import { useMediaDetailsFetch } from "../../../hooks/media/useMediaDetailsFetch";
 import { addFavorite, removeFavorite } from "../../../redux/favorites/slice";
 import { classNames } from "../../../utils/classNames";
+import { useThemeContext } from "../../../hooks/theme/useThemeContext";
 import "./Details.styles.css";
 
 const Details = () => {
@@ -13,6 +14,7 @@ const Details = () => {
     const { mediaDetails, loading } = useMediaDetailsFetch(type, movieId);
     const favorites = useSelector((store) => store.favorites);
     const userDetails = useSelector((store) => store.user.userProfile);
+    const { isLightMode } = useThemeContext();
 
     const [isFavorite, setIsFavorite] = useState(false);
 
@@ -37,13 +39,16 @@ const Details = () => {
     };
 
     return (
-        <section className="details-container">
+        <section
+            className="details-container"
+            data-theme={isLightMode ? "light" : "dark"}
+        >
             {loading && <Loading />}
             {mediaDetails && (
                 <div className="details-content">
                     {!mediaDetails.poster_path ? (
                         <img
-                            src={"cineverse/images/default-img.png"}
+                            src={"/images/default-img.png"}
                             alt="default-image"
                         />
                     ) : (
@@ -111,7 +116,10 @@ const Details = () => {
                         )}
 
                         <div className="buttons">
-                            <NavLink to={`/cineverse/${type}`} className="go-back-btn">
+                            <NavLink
+                                to={`/integrated-project-react/${type}`}
+                                className="go-back-btn"
+                            >
                                 <i className="pi pi-angle-double-left"></i>
                                 Go back
                             </NavLink>

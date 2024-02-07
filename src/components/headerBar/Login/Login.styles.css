@@ -21,13 +21,6 @@
             width: 40px;
         }
 
-        & .log-in-btn {
-            border: none;
-            cursor: pointer;
-            padding: 0.2rem 0.5rem;
-            border-radius: 0.5rem;
-        }
-
         & .avatar {
             cursor: pointer;
             border-radius: 50%;
@@ -37,6 +30,19 @@
             border: none;
             background-color: transparent;
         }
+    }
+
+    & .log-in-btn {
+        border: none;
+        cursor: pointer;
+        padding: 0.2rem 0.5rem;
+        border-radius: 0.5rem;
+        background-color: var(--secondary-color);
+        color: var(--log-in-text-color);
+    }
+
+    & .log-in-btn:hover {
+        background-color: var(--primary-color);
     }
 
     .modal {
@@ -51,10 +57,13 @@
         bottom: -12rem;
         right: 1rem;
         z-index: 2;
+        background-color: var(--modal-bg-color);
+        color: var(--modal-text-color);
 
         & img {
             width: 65px;
             border: 2px solid;
+            border-color: var(--darkest-color);
         }
 
         & button {
@@ -66,19 +75,20 @@
             font-size: 0.9rem;
             border-radius: 0.5rem;
             width: 100%;
+            border-color: var(--primary-color);
+            color: var(--primary-color);
         }
-    }
 
-    & .log-in-btn {
-        border: none;
-        cursor: pointer;
-        padding: 0.2rem 0.5rem;
-        border-radius: 0.5rem;
+        & button:hover {
+            border-color: var(--modal-hover-color);
+            color: var(--modal-hover-color);
+        }
     }
 
     & .toast-login {
         & .p-toast-message {
             padding: 0.5rem 1rem;
+            background-color: var(--toast-bg-color);
 
             & .p-toast-message-content {
                 align-items: center;

@@ -1,9 +1,11 @@
 /* eslint-disable react/prop-types */
 import "./Pagination.styles.css";
 import { useMediaContext } from "../../context/media.context";
+import { useThemeContext } from "../../hooks/theme/useThemeContext";
 
 const Pagination = ({ maxPage }) => {
     const { currentPage, setCurrentPage } = useMediaContext();
+    const { isLightMode } = useThemeContext();
 
     const MIN_PAGE = 1;
 
@@ -19,9 +21,9 @@ const Pagination = ({ maxPage }) => {
 
     return (
         <>
-            <div className="pagination">
+            <div className="pagination" data-theme={isLightMode ? 'light' : 'dark'}>
                 {currentPage > MIN_PAGE && (
-                    <button onClick={handleClickPrevPage}>Anterior</button>
+                    <button onClick={handleClickPrevPage}>Prev</button>
                 )}
                 <div className="pages">
                     {currentPage > MIN_PAGE && (
@@ -33,7 +35,7 @@ const Pagination = ({ maxPage }) => {
                     )}
                 </div>
                 {currentPage < maxPage && (
-                    <button onClick={handleClickNextPage}>Siguiente</button>
+                    <button onClick={handleClickNextPage}>Next</button>
                 )}
             </div>
         </>

@@ -11,6 +11,7 @@
     text-align: center;
     margin: 0 auto;
     text-decoration: none;
+    color: var(--primary-color);
 
     & .img-container {
         position: relative;
@@ -30,6 +31,8 @@
             line-height: 1;
             font-size: 0.9rem;
             font-weight: bold;
+            color: var(--lightest-color);
+            background-color: var(--light-blue);
         }
     }
 
@@ -37,4 +40,8 @@
         font-size: 0.9rem;
         width: 23ch;
     }
+}
+
+.media-card:hover{
+    color: var(--hover-text-color);
 }

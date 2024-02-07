@@ -11,6 +11,8 @@
 		border: 2px solid;
 		border-radius: 50%;
 		animation: spin 1s linear infinite;
+		border-color: var(--primary-color) transparent
+            var(--primary-color) transparent;
 	}
 }
 

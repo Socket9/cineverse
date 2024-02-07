@@ -1,12 +1,14 @@
 import { useGoogleLogin, googleLogout } from "@react-oauth/google";
 import ToggleThemeButton from "../ToggleTheme/ToggleThemeButton";
-import "./Login.styles.css";
 import { useUserTokenFetch } from "../../../hooks/user/useUserTokenFetch";
 import { useUserLogin } from "../../../hooks/user/useUserLogin";
 import { useRef, useState } from "react";
 import { Toast } from "primereact/toast";
+import { useThemeContext } from "../../../hooks/theme/useThemeContext";
+import "./Login.styles.css";
 
 const Login = () => {
+    const { isLightMode } = useThemeContext();
     const { user, setUser, profile, setProfile } = useUserTokenFetch();
     const [showModal, setShowModal] = useState(false);
     const toast = useRef(null);
@@ -35,7 +37,10 @@ const Login = () => {
     };
 
     return (
-        <div className="auth-container">
+        <div
+            className="auth-container"
+            data-theme={isLightMode ? "light" : "dark"}
+        >
             <ToggleThemeButton />
             {profile && user?.access_token ? (
                 <div className="user">

@@ -1,8 +1,52 @@
-@import "./commons/variables";
-
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+[data-theme="light"] {
+    --bg-color: #edf2f9;
+    --section-color: #fdfdfd;
+    --box-shadow: 0 7px 14px 0 rgba(65, 69, 88, 0.1),
+        0 3px 6px 0 rgba(0, 0, 0, 0.07);
+    --primary-color: #5e6e82;
+    --secondary-color: #9fabbc;
+    --tertiary-color: #b1bed1;
+    --darkest-color: #2b3542;
+    --lightest-color: #e2e7ee;
+    --fav-icon: #d3c653;
+    --hover-link-color: #2b3542;
+    --log-in-text-color: #fdfdfd;
+    --modal-bg-color: #e2e7ee;
+    --modal-text-color: #2b3542;
+    --modal-hover-color: #19202b;
+    --toast-bg-color: #e2e7ee;
+    --hover-text-color: #2b3542;
+
+    --text-primary-color: #252d3b;
+    --text-secondary-color: #fdfdfd;
+}
+
+[data-theme="dark"] {
+    --bg-color: #0b1727;
+    --section-color: #162433;
+    --box-shadow: 0 7px 14px 0 rgba(3, 12, 51, 0.15),
+        0 3px 6px 0 rgba(0, 0, 0, 0.2);
+    --primary-color: #b1bed1;
+    --secondary-color: #9fabbc;
+    --tertiary-color: #5e6e82;
+    --darkest-color: #19202b;
+    --lightest-color: #dae2f0;
+    --fav-icon: #dad484;
+    --hover-link-color: #dae2f0;
+    --log-in-text-color: #fdfdfd;
+    --modal-bg-color: #19202b;
+    --modal-text-color: #dae2f0;
+    --modal-hover-color: #dae2f0;
+    --toast-bg-color: #e2e7ee;
+    --hover-text-color: #dae2f0;
+
+    --text-primary-color: #e5e9f0;
+    --text-secondary-color: #19202b;
 }

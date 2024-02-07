@@ -1,9 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { useThemeContext } from "../../../context/theme.context.jsx";
-import { classNames } from "../../../utils/classNames";
+import { useThemeContext } from "../../../hooks/theme/useThemeContext";
 import "./NavBar.styles.css";
-import "../../../commons/themes.css";
 
 const NavBar = () => {
     const { isLightMode } = useThemeContext();
@@ -11,10 +9,8 @@ const NavBar = () => {
 
     return (
         <div
-            className={classNames(
-                "nav-container",
-                isLightMode === true ? "light" : "dark"
-            )}
+            className="nav-container"
+            data-theme={isLightMode ? "light" : "dark"}
         >
             {userDetails && (
                 <div className="nav-section">
@@ -23,11 +19,17 @@ const NavBar = () => {
                         <hr />
                     </div>
                     <div className="links">
-                        <NavLink to={"/cineverse/user/details"} className="nav-link">
+                        <NavLink
+                            to={"/integrated-project-react/user/details"}
+                            className="nav-link"
+                        >
                             <i className="pi pi-sign-in" />
                             <p>Details</p>
                         </NavLink>
-                        <NavLink to={"/cineverse/favorites"} className="nav-link">
+                        <NavLink
+                            to={"/integrated-project-react/favorites"}
+                            className="nav-link"
+                        >
                             <i className="pi pi-clone" />
                             <p>My favorites</p>
                         </NavLink>
@@ -41,11 +43,17 @@ const NavBar = () => {
                     <hr />
                 </div>
                 <div className="links">
-                    <NavLink to={"/cineverse/movie"} className="nav-link">
+                    <NavLink
+                        to={"/integrated-project-react/movie"}
+                        className="nav-link"
+                    >
                         <i className="pi pi-clone" />
                         <p>Movies</p>
                     </NavLink>
-                    <NavLink to={"/cineverse/tv"} className="nav-link">
+                    <NavLink
+                        to={"/integrated-project-react/tv"}
+                        className="nav-link"
+                    >
                         <i className="pi pi-desktop" />
                         <p>TV Shows</p>
                     </NavLink>

@@ -4,8 +4,7 @@ import { useSelector } from "react-redux";
 import MediaCard from "./Movie/MediaCard";
 import Loading from "../loading/Loading";
 import Pagination from "../pagination/Pagination";
-import { classNames } from "../../utils/classNames";
-import { useThemeContext } from "../../context/theme.context";
+import { useThemeContext } from "../../hooks/theme/useThemeContext";
 import { useMediaContext } from "../../context/media.context";
 import { useFetchMedia } from "../../hooks/media/useFetchMedia";
 import "./MediaGrid.styles.css";
@@ -24,10 +23,8 @@ const MediaGrid = () => {
 
     return (
         <section
-            className={classNames(
-                "media-section",
-                isLightMode ? "light" : "dark"
-            )}
+            className="media-section"
+            data-theme={isLightMode ? "light" : "dark"}
         >
             {loading && <Loading />}
             <div className="media-container">

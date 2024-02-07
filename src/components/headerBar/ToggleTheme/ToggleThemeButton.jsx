@@ -1,4 +1,4 @@
-import { useThemeContext } from "../../../context/theme.context";
+import { useThemeContext } from "../../../hooks/theme/useThemeContext";
 import "./ToggleThemeButton.styles.css";
 
 const ToggleThemeButton = () => {
@@ -9,7 +9,11 @@ const ToggleThemeButton = () => {
     };
 
     return (
-        <button onClick={handleClick} className="toggle-button">
+        <button
+            onClick={handleClick}
+            className="toggle-button"
+            data-theme={isLightMode ? "light" : "dark"}
+        >
             {isLightMode ? (
                 <i className="pi pi-sun"></i>
             ) : (

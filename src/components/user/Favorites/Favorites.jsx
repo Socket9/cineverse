@@ -1,15 +1,20 @@
 import { useSelector } from "react-redux";
 import MediaCard from "../../main/Movie/MediaCard";
+import { useThemeContext } from "../../../hooks/theme/useThemeContext";
 import "./Favorites.styles.css";
 
 const Favorites = () => {
+    const { isLightMode } = useThemeContext();
     const favorites = useSelector((store) => store.favorites);
 
     const moviesList = favorites.filter((favItem) => favItem.type === "movie");
     const tvList = favorites.filter((favItem) => favItem.type === "tv");
 
     return (
-        <section className="favorites-section">
+        <section
+            className="favorites-section"
+            data-theme={isLightMode ? "light" : "dark"}
+        >
             <div className="fav-container">
                 <h4 className="fav-title">Your favorite movies</h4>
                 {moviesList.length === 0 ? (

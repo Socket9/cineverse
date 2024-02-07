@@ -4,9 +4,16 @@
     justify-content: center;
     cursor: pointer;
     background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
 
     & i {
         padding: 0.5rem;
         font-weight: bold;
     }
+}
+
+.toggle-button:hover {
+    border: 2px solid var(--hover-link-color);
+    color: var(--hover-link-color);
 }

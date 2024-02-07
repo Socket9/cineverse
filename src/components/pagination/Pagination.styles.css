@@ -5,27 +5,36 @@
     align-items: center;
     gap: 1rem;
 
-    & .pages{
-	display: flex;
-	align-items: center;
-	font-weight: bold;
-	gap: .5rem;
+    & .pages {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        gap: 0.5rem;
 
-	& .current {
-		font-size: 1.7rem;
-	}
+        & .current {
+            font-size: 1.7rem;
+            color: var(--text-primary-color);
+        }
 
-	& .prev, .next{
-		font-size: .8rem;
-	}
+        & .prev,
+        .next {
+            font-size: 0.8rem;
+            color: var(--primary-color);
+        }
     }
 
     & button {
         padding: 0.1rem 0.5rem;
         font-size: 0.9rem;
-	  font-weight: bold;
-	  border: 2px solid transparent;
-	  border-radius: .5rem;
-	  cursor: pointer;
+        font-weight: bold;
+        border: 2px solid transparent;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        background-color: var(--secondary-color);
+        color: var(--text-primary-color);
+    }
+
+    & button:hover{
+        background-color: var(--tertiary-color);
     }
 }

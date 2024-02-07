@@ -6,7 +6,7 @@ const PrivateRoute = ({ component }) => {
     const userDetails = useSelector((store) => store.user.userProfile);
 
     if (!userDetails) {
-        return <Navigate to="/cineverse/movie" />;
+        return <Navigate to="/movie" />;
     }
 
     return component;

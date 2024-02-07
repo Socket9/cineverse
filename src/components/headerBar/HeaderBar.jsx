@@ -1,7 +1,6 @@
 import Search from "./Search/Search";
 import "./HeaderBar.styles.css";
-import { useThemeContext } from "../../context/theme.context.jsx";
-import { classNames } from "../../utils/classNames";
+import { useThemeContext } from "../../hooks/theme/useThemeContext";
 import Login from "./Login/Login";
 
 const HeaderBar = () => {
@@ -9,10 +8,8 @@ const HeaderBar = () => {
 
     return (
         <section
-            className={classNames(
-                "header-container",
-                isLightMode === true ? "light" : "dark"
-            )}
+            className="header-container"
+            data-theme={isLightMode ? "light" : "dark"}
         >
             <Search />
             <Login />

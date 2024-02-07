@@ -1,16 +1,16 @@
 import "./Logo.styles.css";
-import { useThemeContext } from "../../../context/theme.context.jsx";
+import { useThemeContext } from "../../../hooks/theme/useThemeContext";
 
 const Logo = () => {
     const { isLightMode } = useThemeContext();
 
     const logoPath = isLightMode
-        ? "/cineverse/images/logo-light.png"
-        : "/cineverse/images/logo-dark.png";
+        ? "/images/logo-light.png"
+        : "/images/logo-dark.png";
 
     return (
         <div className="logo-container">
-            <img src={logoPath} alt="" />
+            <img src={import.meta.env.BASE_URL + logoPath} alt="" />
         </div>
     );
 };

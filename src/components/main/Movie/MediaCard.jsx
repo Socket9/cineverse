@@ -1,11 +1,14 @@
 import { NavLink } from "react-router-dom";
-import "./MediaCard.styles.css";
 import { getYearFromDate } from "../../../utils/getYearFromDate";
+import "./MediaCard.styles.css";
 
 /* eslint-disable react/prop-types */
 const MediaCard = ({ media, type }) => {
     return (
-        <NavLink to={`/cineverse/detail/${type}/${media.id}`} className="media-card">
+        <NavLink
+            to={`/integrated-project-react/detail/${type}/${media.id}`}
+            className="media-card"
+        >
             {type === "movie" && (
                 <article>
                     <div className="img-container">
