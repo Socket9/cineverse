@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { setUserProfile, logOutUser } from "@/redux/users/slice";
+import { setUserProfile, logOutUser } from "../../redux/users/slice";
 
 export const useUserLogin = (profile) => {
     const dispatch = useDispatch();
