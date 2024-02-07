@@ -1,7 +1,6 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { useThemeContext } from "../context/theme.context.jsx";
 import { MediaContextProvider } from "../context/media.context";
-import { classNames } from "../utils/classNames";
 import MediaGrid from "../components/main/MediaGrid";
 import Aside from "../components/aside/Aside";
 import HeaderBar from "../components/headerBar/HeaderBar";
@@ -18,10 +17,8 @@ const MainContainer = () => {
     return (
         <BrowserRouter>
             <main
-                className={classNames(
-                    "main",
-                    isLightMode === true ? "light" : "dark"
-                )}
+                className="main"
+                data-theme={isLightMode ? 'light' : 'dark'}
             >
                 <Aside />
                 <section className="content-container">

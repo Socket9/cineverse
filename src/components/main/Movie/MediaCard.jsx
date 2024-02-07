@@ -6,7 +6,7 @@ import "./MediaCard.styles.css";
 const MediaCard = ({ media, type }) => {
     return (
         <NavLink
-            to={`/integrated-project-react/detail/${type}/${media.id}`}
+            to={`/cineverse/detail/${type}/${media.id}`}
             className="media-card"
         >
             {type === "movie" && (

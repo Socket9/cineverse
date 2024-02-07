@@ -117,7 +117,7 @@ const Details = () => {
 
                         <div className="buttons">
                             <NavLink
-                                to={`/integrated-project-react/${type}`}
+                                to={`/cineverse/${type}`}
                                 className="go-back-btn"
                             >
                                 <i className="pi pi-angle-double-left"></i>

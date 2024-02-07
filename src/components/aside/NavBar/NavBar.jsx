@@ -20,14 +20,14 @@ const NavBar = () => {
                     </div>
                     <div className="links">
                         <NavLink
-                            to={"/integrated-project-react/user/details"}
+                            to={"/cineverse/user/details"}
                             className="nav-link"
                         >
                             <i className="pi pi-sign-in" />
                             <p>Details</p>
                         </NavLink>
                         <NavLink
-                            to={"/integrated-project-react/favorites"}
+                            to={"/cineverse/favorites"}
                             className="nav-link"
                         >
                             <i className="pi pi-clone" />
@@ -44,14 +44,14 @@ const NavBar = () => {
                 </div>
                 <div className="links">
                     <NavLink
-                        to={"/integrated-project-react/movie"}
+                        to={"/cineverse/movie"}
                         className="nav-link"
                     >
                         <i className="pi pi-clone" />
                         <p>Movies</p>
                     </NavLink>
                     <NavLink
-                        to={"/integrated-project-react/tv"}
+                        to={"/cineverse/tv"}
                         className="nav-link"
                     >
                         <i className="pi pi-desktop" />
