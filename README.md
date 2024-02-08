@@ -7,5 +7,4 @@ Consigna:
 
 Aclaraciones: 
   - Se trató de aplicar todo lo visto en clase.
-  - Por falta de tiempo no se implementó Responsive Design para poder priorizar otros features.
   - Se recomienda clonar repositorio y testear localmente.
