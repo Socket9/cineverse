@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { createContext, useContext, useState } from "react";
+import { createContext, useState } from "react";
 
 export const ThemeContext = createContext();
 
@@ -10,13 +10,4 @@ export const ThemeContextProvider = ({ children }) => {
             {children}
         </ThemeContext.Provider>
     );
-};
-
-export const useThemeContext = () => {
-    const context = useContext(ThemeContext);
-
-    if (context === undefined) {
-        throw new Error("ThemeContext debe ser utilizado dentro del provider.");
-    }
-    return context;
 };

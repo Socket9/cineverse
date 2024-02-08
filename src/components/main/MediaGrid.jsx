@@ -5,7 +5,7 @@ import MediaCard from "./Movie/MediaCard";
 import Loading from "../loading/Loading";
 import Pagination from "../pagination/Pagination";
 import { useThemeContext } from "../../hooks/theme/useThemeContext";
-import { useMediaContext } from "../../context/media.context";
+import { useMediaContext } from "../../hooks/media/useMediaContext";
 import { useFetchMedia } from "../../hooks/media/useFetchMedia";
 import "./MediaGrid.styles.css";
 
@@ -14,7 +14,6 @@ const MediaGrid = () => {
     const { isLightMode } = useThemeContext();
     const { type } = useParams();
     const { currentPage, setCurrentPage } = useMediaContext();
-
     const { media, loading } = useFetchMedia(searchKey, type, currentPage);
 
     useEffect(() => {

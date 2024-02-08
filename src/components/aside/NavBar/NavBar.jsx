@@ -43,17 +43,11 @@ const NavBar = () => {
                     <hr />
                 </div>
                 <div className="links">
-                    <NavLink
-                        to={"/cineverse/movie"}
-                        className="nav-link"
-                    >
+                    <NavLink to={"/cineverse/movie"} className="nav-link">
                         <i className="pi pi-clone" />
                         <p>Movies</p>
                     </NavLink>
-                    <NavLink
-                        to={"/cineverse/tv"}
-                        className="nav-link"
-                    >
+                    <NavLink to={"/cineverse/tv"} className="nav-link">
                         <i className="pi pi-desktop" />
                         <p>TV Shows</p>
                     </NavLink>

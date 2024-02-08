@@ -1,5 +1,5 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import { useThemeContext } from "../context/theme.context.jsx";
+import { useThemeContext } from "../hooks/theme/useThemeContext.jsx";
 import { MediaContextProvider } from "../context/media.context";
 import MediaGrid from "../components/main/MediaGrid";
 import Aside from "../components/aside/Aside";
@@ -7,19 +7,16 @@ import HeaderBar from "../components/headerBar/HeaderBar";
 import Details from "../components/main/Details/Details";
 import UserDetails from "../components/user/UserDetails";
 import Favorites from "../components/user/Favorites/Favorites";
-import PrivateRoute from "../components/router/PrivateRoute.jsx";
-import "./MainContainer.styles.css";
+import PrivateRoute from "../components/privateRoutes/PrivateRoute.jsx";
 import "primeicons/primeicons.css";
+import "./MainContainer.styles.css";
 
 const MainContainer = () => {
     const { isLightMode } = useThemeContext();
 
     return (
         <BrowserRouter>
-            <main
-                className="main"
-                data-theme={isLightMode ? 'light' : 'dark'}
-            >
+            <main className="main" data-theme={isLightMode ? "light" : "dark"}>
                 <Aside />
                 <section className="content-container">
                     <HeaderBar />
@@ -27,25 +24,17 @@ const MainContainer = () => {
                         <Routes>
                             <Route
                                 path="/"
-                                element={
-                                    <Navigate to="/cineverse/movie" />
-                                }
+                                element={<Navigate to="/cineverse/movie" />}
                             />
                             <Route
                                 path="/cineverse"
-                                element={
-                                    <Navigate to="/cineverse/movie" />
-                                }
+                                element={<Navigate to="/cineverse/movie" />}
                             />
                             <Route
                                 path="/cineverse/favorites"
                                 element={
                                     <PrivateRoute component={<Favorites />} />
                                 }
-                            />
-                            <Route
-                                path="/cineverse/:type"
-                                element={<MediaGrid />}
                             />
                             <Route
                                 path="/cineverse/user/details"
@@ -56,6 +45,10 @@ const MainContainer = () => {
                             <Route
                                 path="/cineverse/detail/:type/:movieId"
                                 element={<Details />}
+                            />
+                            <Route
+                                path="/cineverse/:type"
+                                element={<MediaGrid />}
                             />
                         </Routes>
                     </MediaContextProvider>

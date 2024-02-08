@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import "./Pagination.styles.css";
-import { useMediaContext } from "../../context/media.context";
+import { useMediaContext } from "../../hooks/media/useMediaContext";
 import { useThemeContext } from "../../hooks/theme/useThemeContext";
 
 const Pagination = ({ maxPage }) => {
