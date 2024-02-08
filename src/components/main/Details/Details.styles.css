@@ -183,3 +183,29 @@
         }
     }
 }
+
+@media (width < 910px) and (width > 700px) {
+    .details-container {
+        & .details-content {
+            flex-direction: column;
+
+            & img{
+                width: 250px;
+                margin: auto;
+            }
+        }
+    }
+}
+
+@media (width < 700px){
+    .details-container {
+        & .details-content {
+            flex-direction: column;
+
+            & img{
+                width: 250px;
+                margin: auto;
+            }
+        }
+    }
+}

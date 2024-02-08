@@ -7,7 +7,7 @@ import HeaderBar from "../components/headerBar/HeaderBar";
 import Details from "../components/main/Details/Details";
 import UserDetails from "../components/user/UserDetails";
 import Favorites from "../components/user/Favorites/Favorites";
-import PrivateRoute from "../components/Router/PrivateRoute";
+import PrivateRoute from "../components/router/PrivateRoute.jsx";
 import "./MainContainer.styles.css";
 import "primeicons/primeicons.css";
 

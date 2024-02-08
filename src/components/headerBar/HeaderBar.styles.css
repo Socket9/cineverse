@@ -9,4 +9,22 @@
     position: relative;
     background-color: var(--section-color);
     box-shadow: var(--box-shadow);
+
+    & .login-toggle{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
 }
+
+@media (width < 800px) {
+    .header-container {
+        flex-direction: column-reverse;
+
+        & .login-toggle{
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+}
+

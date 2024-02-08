@@ -1,5 +1,4 @@
 import { useGoogleLogin, googleLogout } from "@react-oauth/google";
-import ToggleThemeButton from "../ToggleTheme/ToggleThemeButton";
 import { useUserTokenFetch } from "../../../hooks/user/useUserTokenFetch";
 import { useUserLogin } from "../../../hooks/user/useUserLogin";
 import { useRef, useState } from "react";
@@ -41,7 +40,6 @@ const Login = () => {
             className="auth-container"
             data-theme={isLightMode ? "light" : "dark"}
         >
-            <ToggleThemeButton />
             {profile && user?.access_token ? (
                 <div className="user">
                     <button className="avatar" onClick={handleClick}>

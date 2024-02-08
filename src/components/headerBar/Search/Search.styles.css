@@ -2,7 +2,6 @@
     display: flex;
     align-items: center;
     border-radius: 2rem;
-    border: 2px solid transparent;
     background-color: var(--bg-color);
     border: 2px solid transparent;
 
@@ -39,4 +38,10 @@
 
 .search-container:focus-within {
     border: 2px solid var(--primary-color);
+}
+
+@media (width < 800px) {
+    .search-container{
+        width: 100%;
+    }
 }

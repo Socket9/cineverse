@@ -5,3 +5,9 @@
     border-radius: 0.5rem;
     padding: 1rem;
 }
+
+@media (width < 700px){
+    .aside {
+        height: auto;
+    }
+}

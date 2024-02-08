@@ -1,8 +1,6 @@
 .auth-container {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    gap: 1.5rem;
 
     & .user {
         display: flex;
@@ -95,5 +93,12 @@
                 gap: 1rem;
             }
         }
+    }
+}
+
+@media (width < 450px){
+    .toast-login {
+        width: 330px;
+        
     }
 }

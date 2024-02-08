@@ -2,9 +2,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1rem;
+    margin-bottom: 1rem;
 
     & img {
         width: 200px;
+    }
+}
+
+@media (width < 800px) and (width > 700px) {
+    .logo-container{
+        & img{
+            width:150px;
+        }
     }
 }
